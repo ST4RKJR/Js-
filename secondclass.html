@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: rgb(5, 24, 48);
+            font-size: 2vw;
+            color:antiquewhite
+        }
+        #heading{
+            text-align: center;
+            font-size: 2vw;
+            color:antiquewhite
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="heading"><div><h1>Class 2</h1></div></div>
+
+    <div>
+        <h3>Math.round()    -   Gives you rounded value </h3>
+        <h3>Math.ceil() - Gives you the round up</h3>
+        <h3>Math.floor() - Gives you the round down</h3>
+        <h3>Math.random() - Gives you the random value</h3>
+        <h3>Math.random()*X - Gives you the random value of b/w 0 to any X value</h3>
+        <h3>Math.round(Math.random()*5)</h3>
+
+        <h3>document.write(name[3]) - In Js Indexing works like this</h3>
+    </div>
+
+    <script>
+        document.write('<span style="color:red;font-size:50px">Round of 456.7 -- </span>')
+        document.write('<span style="color:red;font-size:50px">Math.round(456.7)</span>')
+        document.write('<span style="color:red;font-size:50px">Math.random(5)</span>')
+
+
+        let name = "Newton School"
+
+        document.write(name[3],"<br>")
+
+        document.write(`${name} is the name of the College`,"<br>") //backticks are used as f string in js same as python by using prefix $ of {}
+
+        document.write(name.charAt(3),"<br>")
+
+        document.write(name.length,"<br>")
+
+        document.write(name.toUpperCase(),"<br>")
+
+        document.write(name.toLowerCase(),"<br>")
+
+        let name2 = "Of Technology"
+
+        document.write(name.concat("+",name2),"<br>")
+
+        name = name.padStart(4,"0")
+        document.write(name,"<br>")
+    </script>
+    
+</body>
+</html>
