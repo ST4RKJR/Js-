@@ -33,9 +33,9 @@
     </div>
 
     <script>
-        document.write('<span style="color:red;font-size:50px">Round of 456.7 -- </span>')
-        document.write('<span style="color:red;font-size:50px">Math.round(456.7)</span>')
-        document.write('<span style="color:red;font-size:50px">Math.random(5)</span>')
+        document.write('<span style="color:red;font-size:50px">Round of 456.7 -- </span>',"<br>")
+        document.write('<span style="color:red;font-size:50px">Math.round(456.7)</span>',"<br>")
+        document.write('<span style="color:red;font-size:50px">Math.random(5)</span>',"<br>")
 
 
         let name = "Newton School"
@@ -56,8 +56,17 @@
 
         document.write(name.concat("+",name2),"<br>")
 
-        name = name.padStart(4,"0")
         document.write(name,"<br>")
+
+        document.write("Hey","<br>")
+
+        document.write(typeof name,"<br>")
+
+        let n = 4
+        n++
+        document.write(n,"<br>")
+        n--
+        document.write(n,"<br>")
     </script>
     
 </body>
