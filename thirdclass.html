@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #max{
+            height: 700px;
+            width: 700px;
+            background-color: lightblue;
+            z-index: -1;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+
+        }
+        .text{
+            color:darkbrown;
+            font-size:30px;
+            font-weight:600;
+            display:flex;
+            justify-content:center;
+            top:450px;
+            position:relative
+        }
+    </style>
+</head>
+<body>
+    <div id="max"></div>
+
+
+    <script>
+        let a = 4 
+        switch(a){
+            case 1:
+                console.log("1")
+            case 2:
+                console.log("2")
+            case 3:
+                console.log("3")
+            case 4:
+                console.log("4")
+            case 5:
+                console.log("5")
+            default:
+                console.log("pata nahi")
+        }
+        
+        document.write(`<span class="text" >Learn about Switch and if else</span>`)
+    
+        if (5<10){console.log("True")}else{console.log("False")}
+        //Ternary Operator - it is same like if else but with another syntax
+        5<10 ? console.log("True") : console.log("False")
+
+        document.write(`<span class="text">Learn about ternary operators and their use</span>`)
+
+        //let input = prompt("Enter your input:");
+        ///console.log(input); 
+        //let isEven
+        //if (input%2==0){isEven==true}else{isEven==false}
+        //let isOdd = input % 2 != 0 ? true:false
+
+        for (let i = 0; i < 10; ++i){
+            console.log(i)
+        }
+        console.log("Hello, World!".indexOf("World!"))
+    </script>
+    
+</body>
+</html>
