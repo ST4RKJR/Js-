@@ -87,6 +87,20 @@
           console.log(calculate(myFun));
         
 
+          function makeLogger(type){
+            return function(message){
+                console.log(`${type}:${message}`)
+            }
+          }
+
+          let warnLogger = makeLogger("WARN:")
+          let infoLogger = makeLogger("INFO:")
+
+          makeLogger("I am a log")
+          makeLogger("I am a Logger")
+
+
+
     </script>
     
 </body>
