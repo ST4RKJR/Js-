@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Functions</title>
+    <style>
+        body{
+            margin:0;
+            padding: 0;
+            overflow: hidden;
+        }
+        img{
+            width: 200vh;
+            height: 110vh;
+            margin:0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="https://r4.wallpaperflare.com/wallpaper/531/951/621/digital-digital-art-artwork-illustration-minimalism-hd-wallpaper-08869d3810a06c28a09cf1be487204ea.jpg">
+
+
+
+    <script>
+        function sayhello(x){
+            console.log(`Hello, ${x}`)
+        }
+        sayhello("sahil")
+
+        function adder(a,b){
+            console.log(a+b)
+        }
+        let calculator = {
+            add : adder,
+            sub : function(a,b){
+                console.log(a-n)
+            },
+            mul(a,b){
+                console.log(a*b)
+            },
+            //div: (a,b)=>{if (b==0){console.log("Invalid")}else{console.log(a/b)}}
+            div: (a,b)=> b==0 ? ("Invalid"):(a/b)
+
+        }
+
+        obj = {
+            name:"Sahil",
+            age : 18,
+            gender : "Male",
+            specs:true
+        }
+        function ani(y){
+            console.log("Name:",y.name)
+            console.log("Specs?:",y.specs)
+        }
+        ani(obj)
+
+        //arrow functions!!
+
+        //function makeCube(x){
+        //    console.log(x**3)
+        //}
+
+        const makeCube = function(x){
+            let cube = x ** 3
+            return cube
+        }
+        let cubeOf9 = makeCube(9)
+        console.log(cubeOf9)
+
+        console.log(calculator.div(10,2))
+
+        var sum = function(x, y, z) {
+            return x + y + z;
+         };
+         
+         console.log(sum(17, 37));
+
+         function calculate(param) {
+            return param(2, 3);
+          }
+        
+          const myFun = (p, q) => p * q;
+        
+          console.log(calculate(myFun));
+        
+
+    </script>
+    
+</body>
+</html>
