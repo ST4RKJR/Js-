@@ -1,0 +1,1 @@
+{"name":"Local: Let's Get ACs - Medium","url":"/Users/sahilsingh/Desktop/Js-/Assignment/Let's Get ACs - Medium.py","tests":[{"id":1737442042664,"input":"8 3\nACACTACG\n3 7\n2 3\n1 8","output":"2\n0\n3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/sahilsingh/Desktop/Js-/Assignment/Let's Get ACs - Medium.py","group":"local","local":true}
