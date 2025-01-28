@@ -23,5 +23,11 @@ let ans3 = [1000 , 10000, 100]
 
 let array = [...arr,...ans2,...ans3]
 array.sort()
-console.log(array)
+// console.log(array)
+
+let array2 = [...ans2,...ans3]
+console.log(array2.sort((a,b)=>(parseInt(b)-parseInt(a))))
+
+
+
 
