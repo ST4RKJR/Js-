@@ -124,4 +124,41 @@
 # x = 6
 # print(my_code(arr, x))
 
-# 
+# def function1(arr, t):
+#     left, right = 0, len(arr) - 1
+#     result = -1
+#     while left <= right:
+#         mid = (left + right) // 2
+#         if arr[mid] == t:
+#             result = mid
+#             right = mid - 1  # Move left to find the first occurrence
+#         elif arr[mid] < t:
+#             left = mid + 1
+#         else:
+#             right = mid - 1
+#     return result
+    
+# def function2(arr, t):
+#     left, right = 0, len(arr) - 1
+#     result = -1
+#     while left <= right:
+#         mid = (left + right) // 2
+#         if arr[mid] == t:
+#             result = mid
+#             left = mid + 1  # Move right to find the last occurrence
+#         elif arr[mid] < t:
+#             left = mid + 1
+#         else:
+#             right = mid - 1
+#     return result
+
+# def my_func(arr, t):
+#     first = function1(arr, t)
+#     if first == -1:
+#         return 0
+#     last = function2(arr, t)
+#     return last - first + 1
+
+# arr = [1, 2, 2, 3, 3, 5, 5, 5, 6]
+# t = 5
+# print(my_func(arr, t))
