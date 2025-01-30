@@ -48,7 +48,7 @@ def binary_search_on_row(mat,target,row):
         elif mat[row][middle] > target:
             right = middle - 1
         else:
-            left = mid + 1
+            left = middle + 1
 
 def binary_search(mat,target):         
 
