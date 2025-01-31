@@ -152,13 +152,13 @@
 #             right = mid - 1
 #     return result
 
-def my_func(arr, t):
-    first = function1(arr, t)
-    if first == -1:
-        return 0
-    last = function2(arr, t)
-    return last - first + 1
+# def my_func(arr, t):
+#     first = function1(arr, t)
+#     if first == -1:
+#         return 0
+#     last = function2(arr, t)
+#     return last - first + 1
 
-arr = [1, 2, 2, 3, 3, 5, 5, 5, 6]
-t = 5
-print(my_func(arr, t))
+# arr = [1, 2, 2, 3, 3, 5, 5, 5, 6]
+# t = 5
+# print(my_func(arr, t))
