@@ -57,36 +57,36 @@
 #     high = N - 1
 
 
-    while low <= high:
-        mid = (low+high)//2
-        if mat[mid][0] <= target <= mat[mid][M-1]:
-            return binary_search_on_row(mat,target,mid)
+#     while low <= high:
+#         mid = (low+high)//2
+#         if mat[mid][0] <= target <= mat[mid][M-1]:
+#             return binary_search_on_row(mat,target,mid)
             
-        elif mat[mid][M-1] < target:
-            low = mid + 1
-        else:
-            high = mid - 1
+#         elif mat[mid][M-1] < target:
+#             low = mid + 1
+#         else:
+#             high = mid - 1
             
             
-#Row traversal = 5 * row
+# #Row traversal = 5 * row
 
-def searchMatrix(mat,target):
-    lo = 0 
-    n = len(mat)
-    m = len(mat[0])
-    hi = m*n-1
+# def searchMatrix(mat,target):
+#     lo = 0 
+#     n = len(mat)
+#     m = len(mat[0])
+#     hi = m*n-1
     
-    while lo <= hi :
-        mid = (lo+hi)//2
-        row = mid//m
-        col = mid % m
-        if mat[row][col]== target :
-            return True
-        elif mat[row][col] > target :
-             hi = mid - 1
-        else:
-            lo = mid + 1
-    return False
+#     while lo <= hi :
+#         mid = (lo+hi)//2
+#         row = mid//m
+#         col = mid % m
+#         if mat[row][col]== target :
+#             return True
+#         elif mat[row][col] > target :
+#              hi = mid - 1
+#         else:
+#             lo = mid + 1
+#     return False
 
 
 def function(arr):
