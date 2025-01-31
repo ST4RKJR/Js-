@@ -13,24 +13,24 @@
 # # print(searchMatrix(mat,target))
 
 
-def searchMatrix(mat, target):
-        for i in range(m):
-            mid = 0
-            k = -1
-            left = 0
-            right = len(mat[i])-1
-            while (left <= right):
-                mid = (right+left)//2
-                if mat[i][mid] == target:
-                    k = 1
-                    break
-                elif mat[i][mid] < target:
-                    left = mid + 1
-                else:
-                    right = mid - 1
-            if k == 1: 
-                return True
-        return False
+# def searchMatrix(mat, target):
+#         for i in range(m):
+#             mid = 0
+#             k = -1
+#             left = 0
+#             right = len(mat[i])-1
+#             while (left <= right):
+#                 mid = (right+left)//2
+#                 if mat[i][mid] == target:
+#                     k = 1
+#                     break
+#                 elif mat[i][mid] < target:
+#                     left = mid + 1
+#                 else:
+#                     right = mid - 1
+#             if k == 1: 
+#                 return True
+#         return False
     
 
 
