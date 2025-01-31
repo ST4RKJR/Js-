@@ -138,19 +138,19 @@
 #             right = mid - 1
 #     return result
     
-def function2(arr, t):
-    left, right = 0, len(arr) - 1
-    result = -1
-    while left <= right:
-        mid = (left + right) // 2
-        if arr[mid] == t:
-            result = mid
-            left = mid + 1  # Move right to find the last occurrence
-        elif arr[mid] < t:
-            left = mid + 1
-        else:
-            right = mid - 1
-    return result
+# def function2(arr, t):
+#     left, right = 0, len(arr) - 1
+#     result = -1
+#     while left <= right:
+#         mid = (left + right) // 2
+#         if arr[mid] == t:
+#             result = mid
+#             left = mid + 1  # Move right to find the last occurrence
+#         elif arr[mid] < t:
+#             left = mid + 1
+#         else:
+#             right = mid - 1
+#     return result
 
 def my_func(arr, t):
     first = function1(arr, t)
