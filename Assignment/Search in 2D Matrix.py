@@ -107,22 +107,22 @@
 # words = ["apple", "banana", "cherry", "apple", "date"]
 # print(my_function(words))
 
-def my_code(arr, x):
-    left, right = 0, len(arr) - 1
-    closest = arr[0]
-    while left <= right:
-        mid = (left + right) // 2
-        if abs(arr[mid] - x) < abs(closest - x):
-            closest = arr[mid]
-        if arr[mid] < x:
-            left = mid + 1
-        else:
-            right = mid - 1
-    return closest
+# def my_code(arr, x):
+#     left, right = 0, len(arr) - 1
+#     closest = arr[0]
+#     while left <= right:
+#         mid = (left + right) // 2
+#         if abs(arr[mid] - x) < abs(closest - x):
+#             closest = arr[mid]
+#         if arr[mid] < x:
+#             left = mid + 1
+#         else:
+#             right = mid - 1
+#     return closest
 
-arr = [1, 2, 8, 10, 10, 12, 19]
-x = 6
-print(my_code(arr, x))
+# arr = [1, 2, 8, 10, 10, 12, 19]
+# x = 6
+# print(my_code(arr, x))
 
 def function1(arr, t):
     left, right = 0, len(arr) - 1
