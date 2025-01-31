@@ -89,23 +89,23 @@
 #     return False
 
 
-def function(arr):
-    for i in arr:
-        if arr.count(i) == 1:
-            return i
+# def function(arr):
+#     for i in arr:
+#         if arr.count(i) == 1:
+#             return i
 
-arr = [4, 3, 4, 5, 5]
-print(function(arr))
+# arr = [4, 3, 4, 5, 5]
+# print(function(arr))
 
-def my_function(words):
-    seen = set()
-    for word in words:
-        if word in seen:
-            return word
-        seen.add(word)
+# def my_function(words):
+#     seen = set()
+#     for word in words:
+#         if word in seen:
+#             return word
+#         seen.add(word)
 
-words = ["apple", "banana", "cherry", "apple", "date"]
-print(my_function(words))
+# words = ["apple", "banana", "cherry", "apple", "date"]
+# print(my_function(words))
 
 def my_code(arr, x):
     left, right = 0, len(arr) - 1
