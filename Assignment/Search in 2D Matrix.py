@@ -124,19 +124,19 @@
 # x = 6
 # print(my_code(arr, x))
 
-def function1(arr, t):
-    left, right = 0, len(arr) - 1
-    result = -1
-    while left <= right:
-        mid = (left + right) // 2
-        if arr[mid] == t:
-            result = mid
-            right = mid - 1  # Move left to find the first occurrence
-        elif arr[mid] < t:
-            left = mid + 1
-        else:
-            right = mid - 1
-    return result
+# def function1(arr, t):
+#     left, right = 0, len(arr) - 1
+#     result = -1
+#     while left <= right:
+#         mid = (left + right) // 2
+#         if arr[mid] == t:
+#             result = mid
+#             right = mid - 1  # Move left to find the first occurrence
+#         elif arr[mid] < t:
+#             left = mid + 1
+#         else:
+#             right = mid - 1
+#     return result
     
 def function2(arr, t):
     left, right = 0, len(arr) - 1
