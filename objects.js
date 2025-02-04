@@ -1,39 +1,39 @@
-let car = {
-    brand :"Koegnissegg",
-    model :"Jesko",
-    color :"Red",
-    speed(){
-        "Runs on the Speed of 500Km/hr"
-    },
-}
+// // let car = {
+// //     brand :"Koegnissegg",
+// //     model :"Jesko",
+// //     color :"Red",
+// //     speed(){
+// //         "Runs on the Speed of 500Km/hr"
+// //     },
+// // }
 
-console.log(Object.keys(car))
-
-
-// let car = {
-//     brand: "Koenigsegg",
-//     model: "Jesko",
-//     color: "Red",
-//     speed() {
-//         return "Runs on the Speed of 500Km/hr";
-//     },
-// };
-
-// for (let [key, value] of Object.entries(car)) {
-//     console.log(`${key}: ${typeof value}`);
-// }
-
-let methods = Object.keys(car).filter(k =>{
-    return typeof car[k] === "function"
-})
-
-console.methods
+// // console.log(Object.keys(car))
 
 
-//how to use object.entries and object.fromentries
+// // let car = {
+// //     brand: "Koenigsegg",
+// //     model: "Jesko",
+// //     color: "Red",
+// //     speed() {
+// //         return "Runs on the Speed of 500Km/hr";
+// //     },
+// // };
+
+// // for (let [key, value] of Object.entries(car)) {
+// //     console.log(`${key}: ${typeof value}`);
+// // }
+
+// // let methods = Object.keys(car).filter(k =>{
+// //     return typeof car[k] === "function"
+// // })
+
+// // console.methods
 
 
-//ShallowCopy and DeepCopy
+// //how to use object.entries and object.fromentries
+
+
+// //ShallowCopy and DeepCopy
 const vamshi = {
     age : 19,
     lc : 850,
@@ -54,13 +54,24 @@ const vamshi = {
 }
 
 
-vamshi.lc = 1050
+// vamshi.lc = 1050
 
-const imposter = vamshi 
+// const imposter = {...vamshi }
 
-imposter.lc = 1050
-
-
+// imposter.lc = 1050
 
 
 
+// //underscore library and lowdash library
+
+
+
+// imposter.lc = 50
+
+// console.log(vamshi)
+// console.log(imposter)
+
+console.log(JSON.stringify(vamshi,null,2))
+
+
+let copyofVamshi 
