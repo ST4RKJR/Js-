@@ -34,24 +34,24 @@
 
 
 // //ShallowCopy and DeepCopy
-const vamshi = {
-    age : 19,
-    lc : 850,
-    githubStreak: {
-        count : 21,
-        unit : "days"
-    },
-    githubHandle: "dingdong_vamshi",
-    voulnteer(){
-        return "Feeds street dogs"
-    },
-    play(){
-        console.log("Throws a volleyball at your face!")
-    },
-    dance(){
-        return "breaks the floor"
-    }
-}
+// const vamshi = {
+//     age : 19,
+//     lc : 850,
+//     githubStreak: {
+//         count : 21,
+//         unit : "days"
+//     },
+//     githubHandle: "dingdong_vamshi",
+//     voulnteer(){
+//         return "Feeds street dogs"
+//     },
+//     play(){
+//         console.log("Throws a volleyball at your face!")
+//     },
+//     dance(){
+//         return "breaks the floor"
+//     }
+// }
 
 
 // vamshi.lc = 1050
@@ -71,7 +71,22 @@ const vamshi = {
 // console.log(vamshi)
 // console.log(imposter)
 
-console.log(JSON.stringify(vamshi,null,2))
+// console.log(JSON.stringify(vamshi,null,2))
 
 
-let copyofVamshi 
+// let copyofVamshi 
+
+function printKeys(obj){
+    for (key in obj){
+        console.log(key)
+    }
+    
+}
+
+function printValues(obj){
+    for(key in obj){
+        if (obj[key] > 50){
+            console.log(obj[key])
+        } 
+    }
+}
