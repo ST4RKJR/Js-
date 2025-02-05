@@ -36,3 +36,15 @@ function getHighestEnrolled(obj) {
     let result = Object.keys(obj).filter((el)=>obj[el]===max)
     return result
 }
+
+
+const obj1 = { Alice: 85, Bob: 92, Charlie: 88 };
+const obj2 = { David: 90, Eve: 95, Frank: 80 };
+
+const merged = { ...obj1, ...obj2 };
+
+const sorted = Object.fromEntries(
+    Object.entries(merged).sort((a, b) => b[1] - a[1])
+);
+
+console.log(sorted);
