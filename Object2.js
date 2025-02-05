@@ -29,3 +29,10 @@ function doubleValues(inputObject) {
     return news
 
 }
+
+
+function getHighestEnrolled(obj) {
+    let max = Math.max(...Object.values(obj))
+    let result = Object.keys(obj).filter((el)=>obj[el]===max)
+    return result
+}
