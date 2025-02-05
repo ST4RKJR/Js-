@@ -19,3 +19,11 @@ def summ(arra):
         return 0
     return arra%10+summ(arra//10)
 print(summ(arra))
+
+
+def fact(x):
+    if x <= 1:
+        return 1
+    return x*fact(x-1)
+
+print(fact(3))
