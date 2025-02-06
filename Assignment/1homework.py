@@ -1,0 +1,1 @@
+#given a array of ropes = [ 10 , 23, 35, 5] you want to get k - equal piece of ropes . find the max length of each piece if k = 5.
