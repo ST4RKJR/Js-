@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <button onclick="say()">Click Me!</button>
+
+
+    <script>
+        let ID = setTimeout(()=>{alert("You Failed To CLicK ME!")},5000)
+        function say(){
+            clearTimeout(ID)
+        }
+    
+
+    </script>
+    
+</body>
+</html>
