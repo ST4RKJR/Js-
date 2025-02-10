@@ -13,3 +13,8 @@ def rob(nums):
     #     return 0
     # if 
     return recurse(nums,0)
+
+
+
+#Time Complexity of this code will be O(2^n)
+#Space Complexity of this code will be
