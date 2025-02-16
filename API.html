@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Learning API</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let responseKaPromise = fetch("https://api.thecatapi.com/v1/images/search?")
+
+        let dataKaPromise = responseKaPromise.then(function(response){
+            return response.json()
+        })
+
+        dataKaPromise.then(function(data){
+            console.log(data)
+        })
+
+
+
+
+
+    </script>
+</body>
+</html>
