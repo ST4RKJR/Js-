@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Learning API</title>
@@ -17,6 +17,32 @@
         dataKaPromise.then(function(data){
             console.log(data)
         })
+ -->
+
+
+        Promise.reject("Junk Food")
+  .then(function(response){
+    console.log(response);
+    return Promise.reject("Inconsistency");
+  })
+  .catch(function(error) {
+    console.log(error);
+    return Promise.reject("Procrastination");
+  })
+  .catch(function(error){
+    console.log(error);
+    return Promise.reject("Fear of failure");
+  })
+  .catch(function(error) {
+    console.log(error);
+    return Promise.resolve("You made it champ :)");
+  })
+  .finally(function() {
+    console.log("MileStone Achieved");
+  })
+  .then(function(error){
+    console.log(error);
+  });
 
 
 
