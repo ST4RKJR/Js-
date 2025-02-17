@@ -14,3 +14,12 @@
 def findKthLargest(nums, k):
     nums.sort()
     return nums[-k]
+
+
+
+#100 Days of Code Begins
+n = int(input())
+if n == 1 :
+    print("Congratulations! You've completed Day 1!")
+else:
+    print(f"You're on Day {n} of the challenge! Keep going!")
