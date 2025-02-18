@@ -13,3 +13,18 @@ def rob_linear(nums):
         dp[i] = max(dp[i-1], dp[i-2] + nums[i])
     
     return dp[-1]
+
+def rob_circular(nums):
+    if len(nums) == 0:
+        return 0
+    if len(nums) == 1:
+        return nums[0]
+    
+    case1 = rob_linear(nums[:-1])
+    case2 = rob_linear(nums[1:])
+    
+    return max(case1, case2)
+
+n = int(input())
+nums = list(map(int, input().split()))
+print(rob_circular(nums))
