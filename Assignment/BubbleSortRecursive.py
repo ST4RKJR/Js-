@@ -23,4 +23,34 @@ for seq, n in test_cases:
     print(seq)
     
     
+def recursive_bubble(lst):
+    # if times == 0:
+    #     return lst
+    # lst = recurse(lst,0)
+    # lst = recurse(lst,times-1)
+    # return lst
+    if len(lst) == 1 :
+        return lst 
+    recurse(lst)
+    
+    lst = recursive_bubble(lst[:-1]) + [lst[-1]]
+    return lst
+
+    # def bubble_times(lst,times):
+    #     if times == 0:
+    #         return lst
+    #     recurse(lst)
+    #     return bubble_times(lst,times-1)
+    
+
+    # return bubble_times(lst,len(lst))
+
+def recurse(lst,index=0):
+    if index+1 >= len(lst):
+        return lst
+    if lst[index] > lst[index+1]:
+        lst[index],lst[index+1] = lst[index+1],lst[index]
+    return recurse(lst,index+1)
+    
+    
     
