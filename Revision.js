@@ -23,3 +23,20 @@
 // // console.log(object)
 
 
+// // object.keys
+// // object.values
+// // object.entries
+// // object.fromentries
+
+// let Sahil = {
+//     name:"sahil",
+//     age:""
+// }
+
+// let marks = {
+//     maths:10,
+//     cs:5,
+//     hindi:10,
+//     dsa:4,
+// }
+
