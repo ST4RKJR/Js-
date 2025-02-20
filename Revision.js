@@ -40,3 +40,20 @@
 //     dsa:4,
 // }
 
+// let marksArray = Object.values(marks)
+// console.log(marksArray)
+// let sum = 0
+// marksArray.forEach(element => {
+//     sum += element
+// });
+// console.log(sum)
+
+
+let myAttendance = new Promise((resolve,reject)=>{
+    if (myAttendance > 75){
+        resolve("Attendance Completed")
+    }else{
+        reject("Book Your Tiket to your Home!!")
+    }
+})
+console.log(myAttendance)
