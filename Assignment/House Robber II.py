@@ -1,30 +1,44 @@
-def rob_linear(nums):
-    n = len(nums)
-    if n == 0:
-        return 0
-    if n == 1:
-        return nums[0]
+# def rob_linear(nums):
+#     n = len(nums)
+#     if n == 0:
+#         return 0
+#     if n == 1:
+#         return nums[0]
     
-    dp = [0] * n
-    dp[0] = nums[0]
-    dp[1] = max(nums[0], nums[1])
+#     dp = [0] * n
+#     dp[0] = nums[0]
+#     dp[1] = max(nums[0], nums[1])
     
-    for i in range(2, n):
-        dp[i] = max(dp[i-1], dp[i-2] + nums[i])
+#     for i in range(2, n):
+#         dp[i] = max(dp[i-1], dp[i-2] + nums[i])
     
-    return dp[-1]
+#     return dp[-1]
 
-def rob_circular(nums):
-    if len(nums) == 0:
+# def rob_circular(nums):
+#     if len(nums) == 0:
+#         return 0
+#     if len(nums) == 1:
+#         return nums[0]
+    
+#     case1 = rob_linear(nums[:-1])
+#     case2 = rob_linear(nums[1:])
+    
+#     return max(case1, case2)
+
+# n = int(input())
+# nums = list(map(int, input().split()))
+# print(rob_circular(nums))
+
+
+def helper(index,arr,n,checker):
+    if index >= n:
         return 0
-    if len(nums) == 1:
-        return nums[0]
-    
-    case1 = rob_linear(nums[:-1])
-    case2 = rob_linear(nums[1:])
-    
-    return max(case1, case2)
+    if index == n-1 and checker == 0:
+        return 0
+    include = helper(index+2,arr,n,checker)+arr[index]
+    exclude = helper(index+1,arr,n,checker)
+    return max(include,exclude)
 
 n = int(input())
 nums = list(map(int, input().split()))
-print(rob_circular(nums))
+print(helper(nums))
