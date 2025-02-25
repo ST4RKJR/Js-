@@ -49,11 +49,11 @@
 // console.log(sum)
 
 
-let myAttendance = new Promise((resolve,reject)=>{
-    if (myAttendance > 75){
-        resolve("Attendance Completed")
-    }else{
-        reject("Book Your Tiket to your Home!!")
-    }
-})
-console.log(myAttendance)
+// let myAttendance = new Promise((resolve,reject)=>{
+//     if (myAttendance > 75){
+//         resolve("Attendance Completed")
+//     }else{
+//         reject("Book Your Tiket to your Home!!")
+//     }
+// })
+// console.log(myAttendance)
