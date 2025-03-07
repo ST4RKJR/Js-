@@ -29,3 +29,19 @@ def has_pair_with_sum(arr, target):
         else:
             right -= 1
     return False
+
+#User function Template for python3
+class Solution:
+    def twoSum(self, arr, target):
+        # code here
+        arr.sort()
+        left=0
+        right=len(arr)-1
+        while left<right:
+            if arr[left]+arr[right]==target:
+                return True
+            elif arr[left]+arr[right]>target:
+                right-=1
+            elif arr[left]+arr[right]<target:
+                left+=1
+        return False
