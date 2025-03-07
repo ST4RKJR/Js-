@@ -17,3 +17,15 @@ target_sum = int(input())
 
 print("true" if subset_sum_exists(nums, target_sum) else "false")
 
+#Find Pair with Target Sum - Hard Version
+def has_pair_with_sum(arr, target):
+    left, right = 0, len(arr) - 1
+    while left < right:
+        curr_sum = arr[left] + arr[right]
+        if curr_sum == target:
+            return True
+        elif curr_sum < target:
+            left += 1
+        else:
+            right -= 1
+    return False
