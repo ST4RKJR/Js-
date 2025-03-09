@@ -29,3 +29,16 @@ class Solution:
             sb.append('0')
             self.generateStrings(result, sb, n, 0)
             sb.pop()
+            
+def bubbleSort(nums, k):
+    swaps = 0
+    n = len(nums)
+    
+    for i in range(n):
+        for j in range(n - i - 1):
+            if nums[j] > nums[j + 1]:
+                nums[j], nums[j + 1] = nums[j + 1], nums[j]
+                swaps += 1
+                if swaps > k:
+                    return False
+    return True
