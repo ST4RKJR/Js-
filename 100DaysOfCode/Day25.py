@@ -8,6 +8,12 @@ def maxAbsoluteSum(nums):
         total_min = min(total_min, min_sum)
     return max(total_max, abs(total_min))
 
+class Solution:
+    def maxAbsoluteSum(self, nums: List[int]) -> int:
+        return max(0, max(K:=list(accumulate(nums))))-min(0, min(K))
+        
+        
+
 #Count Even Factors
 n = int(input())
 count = 0
