@@ -63,3 +63,15 @@ async function checkAvailableQuantity() {
     });
 }
 
+async function total() {
+    const url = "http://50.50.50.115:3000/api/menu";
+    const response = await fetch(url);
+    let data = await response.json();
+
+    let total = orders.reduce((sum, order) => {
+        let item = data.find(item => item.id == order.ordID);
+        return sum + (item ? item.price * Number(order.ordQty) : 0);
+    }, 0);
+
+    console.log(`Total Amount: ${total.toFixed(2)}`);
+}
