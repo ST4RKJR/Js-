@@ -45,5 +45,21 @@ function displayOrders() {
     }
 }
 
+async function checkAvailableQuantity() {
+    const url = "http://50.50.50.115:3000/api/menu";
+    const response = await fetch(url);
+    let data = await response.json();
 
+    let updatedData = data.map(item => {
+        let totalOrdered = orders
+            .filter(order => order.ordID == item.id)
+            .reduce((sum, order) => sum + Number(order.ordQty), 0);
+        return { ...item, availableQuantity: item.availableQuantity - totalOrdered };
+    });
+
+    console.log("Updated Menu Quantities:\n");
+    updatedData.forEach(({ id, itemName, availableQuantity }) => {
+        console.log(`ID: ${id} | Name: ${itemName} | Available: ${availableQuantity}`);
+    });
+}
 
