@@ -32,3 +32,16 @@ class Solution:
 
 
 
+#Factorial Trailing Zeroes
+def trailingZeroes(N):
+    if N < 5:
+        return 0
+    return N // 5 + trailingZeroes(N // 5)
+
+class Solution:
+    def trailingZeroes(self, n: int) -> int:
+        def helper(n):
+            if n<5:
+                return 0
+            return n//5 + helper(n//5)
+        return helper(n)
