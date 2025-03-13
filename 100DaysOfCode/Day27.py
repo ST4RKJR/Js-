@@ -33,7 +33,7 @@ def rob(nums):
     return recurse(nums,0)
 
 class Solution:
-    def rob(self, nums: List[int]) -> int:
+    def rob(self, nums) -> int:
         n = len(nums)
         
         if n == 1:
