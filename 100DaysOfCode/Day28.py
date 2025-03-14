@@ -52,3 +52,15 @@ def rob_circular(nums):
 n = int(input())
 nums = list(map(int, input().split()))
 print(rob_circular(nums))
+
+class Solution:
+    def rob(self, nums: List[int]) -> int:
+
+        def letsRob(nums):
+            prevRob, currRob = 0 , 0
+            for num in nums:
+                prevRob, currRob = currRob , max(currRob, prevRob + num)
+            return currRob
+            
+        return max(nums[0], letsRob(nums[1:]), letsRob(nums[:-1])) 
+        
