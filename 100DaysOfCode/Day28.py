@@ -54,7 +54,7 @@ nums = list(map(int, input().split()))
 print(rob_circular(nums))
 
 class Solution:
-    def rob(self, nums: List[int]) -> int:
+    def rob(self, nums) -> int:
 
         def letsRob(nums):
             prevRob, currRob = 0 , 0
