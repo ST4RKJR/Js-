@@ -36,3 +36,19 @@ class Solution:
                 jumps += 1
                 currentEnd = farthest
         return jumps
+    
+#House Robber 2
+def rob_linear(nums):
+    prev, curr = 0, 0
+    for num in nums:
+        prev, curr = curr, max(curr, prev + num)
+    return curr
+
+def rob_circular(nums):
+    if len(nums) == 1:
+        return nums[0]
+    return max(rob_linear(nums[:-1]), rob_linear(nums[1:]))
+
+n = int(input())
+nums = list(map(int, input().split()))
+print(rob_circular(nums))
