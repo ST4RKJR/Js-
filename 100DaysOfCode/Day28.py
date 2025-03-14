@@ -1,0 +1,28 @@
+#Minimum Jumps
+def min_jumps(n, arr):
+    if n == 1:
+        return 0
+    if arr[0] == 0:
+        return -1
+    
+    jumps = 0
+    max_reach = 0
+    step = 0
+    last_jump = 0
+    
+    for i in range(n):
+        max_reach = max(max_reach, i + arr[i])
+        
+        if i == last_jump:
+            if max_reach <= i:
+                return -1
+            jumps += 1
+            last_jump = max_reach
+            if last_jump >= n - 1:
+                return jumps
+            
+    return -1
+
+n = int(input())
+arr = list(map(int, input().split()))
+print(min_jumps(n, arr))
