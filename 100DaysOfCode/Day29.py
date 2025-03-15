@@ -14,3 +14,5 @@ class Solution:
             return self.kthGrammar(n - 1, k)
         else:
             return 1 - self.kthGrammar(n - 1, k - length)
+        
+# Frog Jump with k Distances (Recursion)
