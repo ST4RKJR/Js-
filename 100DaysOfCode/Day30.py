@@ -21,3 +21,18 @@ class Solution:
             cur_ind = next_to_remove
 
         return circle[0]
+    
+    
+#Count Good Numbers
+def countGoodNumbers(n):
+    MOD = 10**9 + 7
+    even_digits = 5  # {0, 2, 4, 6, 8}
+    prime_digits = 4  # {2, 3, 5, 7}
+
+    even_positions = (n + 1) // 2
+    odd_positions = n // 2
+
+    return pow(even_digits, even_positions, MOD) * pow(prime_digits, odd_positions, MOD) % MOD
+
+
+
