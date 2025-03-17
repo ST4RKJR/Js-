@@ -5,7 +5,7 @@ def findSubsets(nums):
     return [list(subset) for subset in chain.from_iterable(combinations(nums, r) for r in range(len(nums) + 1))]
 
 class Solution:
-    def subsets(self, nums: List[int]) -> List[List[int]]:
+    def subsets(self, nums):
         res = []
         subset = []
 
