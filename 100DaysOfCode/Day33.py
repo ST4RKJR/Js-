@@ -40,3 +40,32 @@ def findClosest(arr, K):
             right = mid - 1
     
     return closest
+
+
+
+from typing import List
+
+
+class Solution:
+    def findClosest(self, arr, k):
+        # code here
+        possible1=0
+        possible2=0
+        left=0
+        right=len(arr)-1
+        while left<=right:
+            mid=(left+right)//2
+            if abs(arr[mid]-k)==0:
+                return arr[mid]
+            elif arr[mid]>k:
+                possible1=mid
+                right=mid-1
+            else:
+                possible2=mid
+                left=mid+1
+        if abs(arr[possible1]-k)<abs(arr[possible2]-k):
+            return arr[possible1]
+        elif abs(arr[possible1]-k)==abs(arr[possible2]-k):
+            return arr[possible1]
+        return arr[possible2]
+
