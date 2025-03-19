@@ -3,11 +3,7 @@ def firstBadVersion(n):
     left, right = 1, n
     while left < right:
         mid = (left + right) // 2
-        if isBadVersion(mid):
-            right = mid  # Search in the left half
-        else:
-            left = mid + 1  # Search in the right half
-    return left
+        
 
 # The isBadVersion API is already defined for you.
 # def isBadVersion(version: int) -> bool:
@@ -17,12 +13,7 @@ class Solution:
         left, right = 1, n
         while left<right:
             mid = (left+right)//2
-            if isBadVersion(mid):
-                right = mid
-            else:
-                left = mid + 1
-        return left 
-
+            
 
 #Diagonal Binary Search
 def searchMatrix(matrix, target):
