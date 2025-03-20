@@ -23,7 +23,7 @@ def findPeakElement(nums):
     return left
 
 class Solution:
-    def findPeakElement(self, nums: List[int]) -> int:
+    def findPeakElement(self, nums) -> int:
         l, r = 0, len(nums) - 1
         while l < r:
             mid = (l + r) // 2
