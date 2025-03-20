@@ -6,6 +6,7 @@ def arrangeCoins(x):
         x -= 1
     return rows_covered
 
+import math
 class Solution:
     def arrangeCoins(self, n: int) -> int:
-        return int(-1+sqrt(1+8*n))//2
+        return int(-1+math.sqrt(1+8*n))//2
