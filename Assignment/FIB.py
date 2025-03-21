@@ -31,3 +31,10 @@ def fib(x):
     ans = fib(x-1)+fib(x-2)
     dictionary[x]=ans
     return ans
+
+def fib(x):
+    if x in dictionary:
+        return dictionary[x]
+    ans = fib(x-1)+fib(x-2)
+    dictionary[x]=ans
+    return ans
