@@ -16,3 +16,11 @@ def fib_old(n):
     return fib_old(n-1)+fib_old(n-2)
 
 print(fib(199))
+
+
+def fib(x):
+    if x in dictionary:
+        return dictionary[x]
+    ans = fib(x-1)+fib(x-2)
+    dictionary[x]=ans
+    return ans
