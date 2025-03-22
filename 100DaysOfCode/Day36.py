@@ -16,3 +16,19 @@ def min_speed(dist, hour):
             left = mid + 1
 
     return res
+
+
+#Element appearing more than 25% in Sorted Array
+import bisect
+
+def find_special_integer(arr):
+    n = len(arr)
+    threshold = n // 4
+
+    for i in [n // 4, n // 2, 3 * n // 4]:
+        num = arr[i]
+        left = bisect.bisect_left(arr, num)
+        right = bisect.bisect_right(arr, num)
+        
+        if right - left > threshold:
+            return num
