@@ -19,7 +19,7 @@ def min_speed(dist, hour):
 
 
 class Solution:
-    def minSpeedOnTime(self, dist: List[int], hour: float) -> int:
+    def minSpeedOnTime(self, dist, hour: float) -> int:
 
         # check if it's possible to reach the office on time with a given speed
         def can_reach_on_time(speed):
