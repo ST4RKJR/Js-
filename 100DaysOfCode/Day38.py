@@ -28,3 +28,18 @@ class Solution:
             cost[i] += min(cost[i+1], cost[i+2])
             
         return min(cost[0], cost[1])
+    
+    
+    
+def minCostClimbingStairs(cost):
+    n = len(cost)
+    if n == 1:
+        return cost[0]
+    
+    dp = [0] * n
+    dp[0], dp[1] = cost[0], cost[1]
+    
+    for i in range(2, n):
+        dp[i] = cost[i] + min(dp[i - 1], dp[i - 2])
+    
+    return min(dp[-1], dp[-2])
