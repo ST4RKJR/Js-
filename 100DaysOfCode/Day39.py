@@ -43,3 +43,14 @@ class Solution:
             return False
         else:
             return subset_sum(nums,sumi//2)
+        
+        
+#Frog Jump (DP)
+class Solution:
+    def maxProfit(self, prices) -> int:
+        min_price = float('inf')
+        max_profit = 0
+        for current_price in prices:
+            min_price = min(current_price, min_price)
+            max_profit = max(max_profit, current_price - min_price)   
+        return max_profit
