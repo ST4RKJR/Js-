@@ -1,5 +1,9 @@
 #Nth Tribonacci 
-
+N = int(input())
+a, b, c = 0, 0, 1
+for _ in range(N - 1):
+    a, b, c = b, c, a + b + c
+print(a)
 
 
 
