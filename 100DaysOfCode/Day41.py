@@ -8,6 +8,8 @@ print(a)
 
 
 
+
+
 #Frog Jump with K Distance (DP)
 D = {}
 def frogJump(n, height, k):
@@ -24,3 +26,4 @@ def frogJump(n, height, k):
         D[i] = min_jump
         return min_jump
     return solve(0)
+
