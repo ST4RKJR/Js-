@@ -12,3 +12,16 @@ def maxSumDivThree(nums):
 # Example Usage
 print(maxSumDivThree([3, 6, 5, 1, 8]))  # Output: 18
 print(maxSumDivThree([4]))              # Output: 0
+
+
+class Solution:
+    def maxSumDivThree(self, a) -> int:
+        w = sum(a)
+        if w%3 == 0:
+            return w
+
+        q = 0
+        for v in a:
+            q[v%3] = sorted(q[v%3]+[v])[:2]
+
+        return w - min(q[w%3][0], sum(q[w%3%2+1]))
