@@ -29,3 +29,20 @@ def closestPrimes(left, right):
 # Example Usage
 left, right = map(int, input().split())
 print(*closestPrimes(left, right))
+
+#Check if Prime 
+def sieve(limit):
+    primes = [1] * (limit + 1)
+    primes[0] = primes[1] = 0  
+    for i in range(2, int(limit ** 0.5) + 1):
+        if primes[i]:
+            for j in range(i * i, limit + 1, i):
+                primes[j] = 0
+    return primes
+
+N = int(input())
+arr = list(map(int, input().split()))
+
+prime_lookup = sieve(10**6)
+
+print(" ".join(str(prime_lookup[num]) for num in arr))
