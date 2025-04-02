@@ -1,5 +1,7 @@
-
-
+#Maximum Product of Three numbers
+def MaxPro(arr):
+    arr.sort()
+    return max(arr[-1]*arr[-2]*arr[-3],arr[0]*arr[1]*arr[-1])
 
 
 
