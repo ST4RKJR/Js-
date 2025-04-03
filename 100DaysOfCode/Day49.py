@@ -23,3 +23,18 @@ def insert(intervals, newInterval):
 
     return res
 
+#Jump Game (Memoization)
+def canJump():
+    n = int(input())
+    nums = list(map(int, input().split()))
+    
+    maxReach = 0
+    for i in range(n):
+        if i > maxReach:
+            print("false")
+            return
+        maxReach = max(maxReach, i + nums[i])
+    
+    print("true")
+
+canJump()
