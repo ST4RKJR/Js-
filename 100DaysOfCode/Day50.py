@@ -26,3 +26,25 @@ for i in merged:
 
 answer = even + odd
 print(*answer)
+
+#Non-overlappying Intervals
+def remove_overlapping(intervals):
+    if not intervals:
+        return 0
+
+    # Sort by end time
+    intervals.sort(key=lambda x: x[1])
+    
+    count = 0
+    last_end = float('-inf')
+    
+    for interval in intervals:
+        start, end = interval
+        if start < last_end:
+            # Overlapping, need to remove
+            count += 1
+        else:
+            # No overlap, update last_end
+            last_end = end
+
+    return count
