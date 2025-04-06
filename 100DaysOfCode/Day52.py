@@ -14,3 +14,37 @@ for _ in range(Q):
     
     
 #palindrome check 
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def is_palindrome(head):
+    if not head or not head.next:
+        return True
+    
+    # Find the middle of the linked list
+    slow = fast = head
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+    
+    # Reverse the second half
+    prev = None
+    current = slow
+    while current:
+        next_node = current.next
+        current.next = prev
+        prev = current
+        current = next_node
+    
+    # Compare the first half and the reversed second half
+    first = head
+    second = prev
+    while second:
+        if first.val != second.val:
+            return False
+        first = first.next
+        second = second.next
+    
+    return True
