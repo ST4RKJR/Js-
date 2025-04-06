@@ -77,3 +77,32 @@ def deleteDuplicates(head):
             current = current.next
     
     return dummy.next
+
+#revised code
+class Node:
+    def __init__(self, data=None, next=None):
+        self.data = data
+        self.next = next
+
+def deleteDuplicates(head):
+    if not head or not head.next:
+        return head
+    
+    dummy = Node(0)
+    dummy.next = head
+    prev = dummy
+    current = head
+    
+    while current:
+        # If current node has duplicates
+        if current.next and current.data == current.next.data:
+            # Skip all nodes with the same value
+            duplicate_value = current.data
+            while current and current.data == duplicate_value:
+                current = current.next
+            prev.next = current
+        else:
+            prev = prev.next
+            current = current.next
+    
+    return dummy.next
