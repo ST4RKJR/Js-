@@ -48,3 +48,32 @@ def is_palindrome(head):
         second = second.next
     
     return True
+
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def deleteDuplicates(head):
+    if not head or not head.next:
+        return head
+    
+    dummy = ListNode(0)
+    dummy.next = head
+    prev = dummy
+    current = head
+    
+    while current:
+        # If current node has duplicates
+        if current.next and current.val == current.next.val:
+            # Skip all nodes with the same value
+            duplicate_value = current.val
+            while current and current.val == duplicate_value:
+                current = current.next
+            prev.next = current
+        else:
+            prev = prev.next
+            current = current.next
+    
+    return dummy.next
