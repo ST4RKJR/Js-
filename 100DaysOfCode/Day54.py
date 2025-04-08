@@ -13,6 +13,6 @@ def detectCycle(head):
         fast = fast.next.next
 
         if slow == fast:
-            return True  # Cycle detected
+            return True  
 
-    return False  # No cycle
+    return False 
