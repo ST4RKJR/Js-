@@ -26,3 +26,32 @@ def addElement(head, M, K):
     current.next = new_node
     
     return head
+
+
+
+#Delete the Kth node from the end
+class Node:
+    def __init__(self, val):
+        self.val = val
+        self.next = None
+
+def deleteElement(head, k):
+    dummy = Node(0)
+    dummy.next = head
+    first = dummy
+    second = dummy
+
+    # Move first pointer k+1 steps ahead
+    for _ in range(k + 1):
+        if first:
+            first = first.next
+
+    # Move both first and second until first reaches end
+    while first:
+        first = first.next
+        second = second.next
+
+    # Skip the target node
+    second.next = second.next.next
+
+    return dummy.next
