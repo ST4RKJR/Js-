@@ -36,3 +36,4 @@ def even_odd_diff(arr):
             odd_sum += arr[i]
 
     return even_sum - odd_sum
+#ss
