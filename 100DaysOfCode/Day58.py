@@ -22,3 +22,17 @@ def subarraySumLL(head, K):
         current = current.next
 
     return count
+
+
+
+def even_odd_diff(arr):
+    even_sum = 0
+    odd_sum = 0
+
+    for i in range(len(arr)):
+        if i % 2 == 0:  # Check if the index is even
+            even_sum += arr[i]
+        else:           # Else, it's odd
+            odd_sum += arr[i]
+
+    return even_sum - odd_sum
