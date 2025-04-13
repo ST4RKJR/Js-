@@ -21,3 +21,27 @@ def isPositive(head):
         return "No"
 
 
+n = int(input())
+tokens = list(map(int, input().split()))
+power = int(input())
+
+tokens.sort()
+left = 0
+right = n - 1
+max_score = 0
+current_score = 0
+
+while left <= right:
+    if power >= tokens[left]:
+        power -= tokens[left]
+        current_score += 1
+        left += 1
+        max_score = max(max_score, current_score)
+    elif current_score > 0:
+        power += tokens[right]
+        current_score -= 1
+        right -= 1
+    else:
+        break
+
+print(max_score)
