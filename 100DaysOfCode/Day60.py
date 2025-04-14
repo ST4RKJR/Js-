@@ -13,3 +13,29 @@ for right in range(len(nums)):
         left += 1
 
 print(min_length if min_length != float('inf') else 0)
+
+
+class ListNode:
+    def __init__(self, value=0, next=None):
+        self.value = value
+        self.next = next
+
+def max_list(num1, num2):
+    def linked_list_to_str(node):
+        result = ''
+        while node:
+            result += str(node.value)
+            node = node.next
+        return result
+
+    str1 = linked_list_to_str(num1)
+    str2 = linked_list_to_str(num2)
+
+    # Compare based on length first
+    if len(str1) > len(str2):
+        return int(str1)
+    elif len(str2) > len(str1):
+        return int(str2)
+    else:
+        # Same length, compare lexicographically
+        return max(int(str1), int(str2))
