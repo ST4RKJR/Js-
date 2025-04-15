@@ -21,3 +21,18 @@ def deleteDuplicates(head):
 
     return head
 
+
+class Node:
+    def __init__(self, val):
+        self.val = val
+        self.next = None
+
+
+def insertion(head, K):
+    temp = head
+    while temp.next != head :
+        temp = temp.next
+    new_node = Node(K)
+    temp.next = new_node
+    new_node.next = head
+    return head
