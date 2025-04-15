@@ -50,3 +50,29 @@ def maxDepth(s):
             current_depth -= 1
     
     return max_depth
+
+
+class Node:
+    def __init__(self, val):
+        self.val = val
+        self.next = None
+
+def max_num(head: Node) -> int:
+    max_number = float('-inf')
+    current = head
+    current_number = ""
+
+    while current:
+        if current.val == -1:
+            if current_number:
+                max_number = max(max_number, int(current_number))
+                current_number = ""
+        elif 0 <= current.val <= 9:
+            current_number += str(current.val)
+        current = current.next
+
+    # In case the list ends without another -1
+    if current_number:
+        max_number = max(max_number, int(current_number))
+
+    return max_number
