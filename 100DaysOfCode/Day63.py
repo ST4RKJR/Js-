@@ -19,3 +19,25 @@ arr = list(map(int, input().split()))  # Array elements
 # Output
 result = smallest_prime_factors(arr)
 print(" ".join(map(str, result)))
+
+
+
+def min_time(times, totalTrips):
+    def trips_completed_in_time(mid):
+        # Calculate total trips that can be completed within time `mid`
+        return sum(mid // t for t in times)
+    
+    low, high = 1, min(times) * totalTrips  # Initialize search space
+    while low < high:
+        mid = (low + high) // 2
+        if trips_completed_in_time(mid) >= totalTrips:
+            high = mid  # Adjust upper bound
+        else:
+            low = mid + 1  # Adjust lower bound
+    
+    return low  # Minimum time required
+
+# Example Usage:
+N, totalTrips = map(int, input().split())  # Number of buses and total trips
+times = list(map(int, input().split()))  # Time taken by each bus
+print(min_time(times, totalTrips))
