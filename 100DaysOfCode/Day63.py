@@ -41,3 +41,16 @@ def min_time(times, totalTrips):
 N, totalTrips = map(int, input().split())  # Number of buses and total trips
 times = list(map(int, input().split()))  # Time taken by each bus
 print(min_time(times, totalTrips))
+
+
+def depth_of_string_stack(s):
+    max_depth = 0
+    current_depth = 0
+    for char in s:
+        if char == '(':
+            current_depth += 1
+            max_depth = max(max_depth, current_depth)
+        elif char == ')':
+            if current_depth > 0:
+                current_depth -= 1
+    return max_depth
