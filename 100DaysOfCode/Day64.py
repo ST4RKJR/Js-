@@ -6,3 +6,6 @@ def removeConsecutiveCharacter(S: str) -> str:
         else:
             stack.append(char)
     return ''.join(stack)
+
+
+
