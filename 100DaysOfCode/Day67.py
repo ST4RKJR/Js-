@@ -21,3 +21,28 @@ def parity_queries(arr, queries):
         results.append(sum_even - sum_odd)
     
     return results
+
+
+#Number of Students Unable to Eat Lunch 
+def countStudents(students, sandwiches):
+    count_0 = students.count(0)
+    count_1 = students.count(1)
+    for sandwich in sandwiches:
+        if sandwich == 0:
+            if count_0 > 0:
+                count_0 -= 1
+            else:
+                return count_1  
+        elif sandwich == 1:
+            if count_1 > 0:
+                count_1 -= 1
+            else:
+                return count_0  
+
+    return 0  
+N = int(input())
+students = list(map(int, input().split()))
+sandwiches = list(map(int, input().split()))
+
+result = countStudents(students, sandwiches)
+print(result)
