@@ -8,4 +8,3 @@ def removeConsecutiveCharacter(S: str) -> str:
     return ''.join(stack)
 
 
-
