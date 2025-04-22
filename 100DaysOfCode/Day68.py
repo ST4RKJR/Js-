@@ -8,7 +8,7 @@ print(f"The sum of squares from 1 to {N} is {sum_of_squares(N)}")
 
 
 class Solution:
-    def preorderTraversal(self, root: TreeNode) -> list[int]:
+    def preorderTraversal(self, root) -> list[int]:
         result = []
         
         def dfs(node):
