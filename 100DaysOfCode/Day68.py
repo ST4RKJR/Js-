@@ -4,3 +4,6 @@ def sum_of_squares(N):
 # Example usage:
 N = int(input("Enter a positive integer: "))
 print(f"The sum of squares from 1 to {N} is {sum_of_squares(N)}")
+
+
+
