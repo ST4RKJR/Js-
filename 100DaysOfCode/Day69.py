@@ -44,3 +44,15 @@ def parent_node(root, X):
             queue.append((current.right, current.val))
 
     return -1  
+
+
+class Solution:
+    def maximumSum(self, arr) -> int:       
+
+        mx = n0 = n1 = -1                             
+                                                        
+        for i, num in enumerate(arr):                                                        
+            n1 = max(n0,  n1 + num)                     
+            n0 = max(num, n0 + num)                     
+            mx = max(mx,  n1,   n0)                                    
+        return mx
