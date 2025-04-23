@@ -14,3 +14,32 @@ def max_sum(arr):
         max_result = max(max_result, dp_no_delete[i], dp_one_delete[i])
 
     return max_result
+
+#Parent Node
+
+'''
+class Node:
+    def __init__(self, val=0):
+        self.val = val
+        self.left = None
+        self.right = None
+'''
+
+def parent_node(root, X):
+    if not root or root.val == X:
+        return -1  
+
+    queue = [(root, -1)]  
+
+    while queue:
+        current, parent = queue.pop(0)  
+
+        if current.val == X:
+            return parent  
+
+        if current.left:
+            queue.append((current.left, current.val))
+        if current.right:
+            queue.append((current.right, current.val))
+
+    return -1  
