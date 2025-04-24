@@ -14,3 +14,27 @@ def maximumUniqueSubarray(nums):
         max_sum = max(max_sum, current_sum)
     
     return max_sum
+
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def pos_node_sum(root):
+    if not root:
+        return 0
+    
+    positive_sum = 0
+    
+    def dfs(node):
+        nonlocal positive_sum
+        if node:
+            if node.val > 0:
+                positive_sum += node.val
+            dfs(node.left)
+            dfs(node.right)
+    
+    dfs(root)
+    return positive_sum
