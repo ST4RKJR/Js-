@@ -27,3 +27,27 @@ def is_leaf_similar(root1, root2):
         return leaves
     
     return 1 if get_leaves(root1) == get_leaves(root2) else 0
+
+
+'''
+class Node:
+    def __init__(self, val=0):
+        self.val = val
+        self.left = None
+        self.right = None
+'''
+
+def is_leaf_similar(root1, root2):
+    def get_leaves(root):
+        leaves = []
+        def dfs(node):
+            if not node:
+                return
+            if not node.left and not node.right:
+                leaves.append(node.val)
+            dfs(node.left)
+            dfs(node.right)
+        dfs(root)
+        return leaves
+    
+    return 1 if get_leaves(root1) == get_leaves(root2) else 0
