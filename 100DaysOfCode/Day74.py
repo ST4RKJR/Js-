@@ -42,3 +42,5 @@ class Solution:
         if root is None:
             return 0
         return 1 + self.sizeBinaryTree(root.left) + self.sizeBinaryTree(root.right)
+    
+    
