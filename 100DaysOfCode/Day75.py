@@ -38,3 +38,37 @@ def zigzag_level_order(root):
         left_to_right = not left_to_right
 
     return result
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def zigzagLevelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+        q=[]
+        if not root:
+            return []
+        q.append(root)
+        res=[]
+        flip=True
+        while q:
+            res.append([])
+            level=[]
+            while q:
+                node=q.pop()
+                res[-1].append(node.val)
+                if flip:
+                    if node.left:
+                        level.append(node.left)
+                    if node.right:
+                        level.append(node.right)
+                else:
+                    if node.right:
+                        level.append(node.right)
+                    if node.left:
+                        level.append(node.left)
+            q=level
+            flip=not flip
+        return res
