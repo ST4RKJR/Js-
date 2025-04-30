@@ -26,3 +26,23 @@ def right_view(root):
                 queue.append(node.right)
 
     return result
+
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def internal_nodes(root):
+    if not root:
+        return 0
+
+    # A node is internal if it has at least one child
+    left_count = internal_nodes(root.left)
+    right_count = internal_nodes(root.right)
+    
+    if root.left or root.right:
+        return 1 + left_count + right_count
+    else:
+        return 0  # It's a leaf node
