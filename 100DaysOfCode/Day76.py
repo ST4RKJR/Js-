@@ -46,3 +46,41 @@ def internal_nodes(root):
         return 1 + left_count + right_count
     else:
         return 0  # It's a leaf node
+
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+from collections import deque
+class Solution:
+    def rightSideView(self, root):
+        queue = deque()
+        if root is None:
+            return []
+        
+        if root.left is None and root.right is None:
+            return [root.val]
+        
+        result = []
+        queue.append(root)
+        while queue:
+            child_queue = deque()
+            prev = -1
+            while queue:
+                curr = queue.popleft()
+
+                if curr.left is not None:
+                    child_queue.append(curr.left)
+
+                if curr.right is not None:
+                    child_queue.append(curr.right)
+                
+                prev = curr
+            
+            result.append(prev.val)
+            queue = child_queue
+        
+        return result
