@@ -29,3 +29,14 @@ def is_unival_tree(root):
         return dfs(node.left, value) and dfs(node.right, value)
 
     return dfs(root, root.val)
+
+
+class Solution:
+    def isUnivalTree(self, root) -> bool:
+        def unique(root,x):
+            if not root:
+                return True
+            if root.val!=x:
+                return False
+            return unique(root.left,x) and unique(root.right,x)
+        return unique(root,root.val)
