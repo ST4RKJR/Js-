@@ -29,3 +29,16 @@ def average_of_levels(root):
         result.append(level_sum / level_count)
 
     return result
+
+
+def max_treasure(n, k, treasure):
+    dp = [0] * n
+
+    for i in range(n):
+        take = treasure[i]
+        if i - k - 1 >= 0:
+            take += dp[i - k - 1]
+        skip = dp[i - 1] if i > 0 else 0
+        dp[i] = max(skip, take)
+
+    return dp[n - 1]
