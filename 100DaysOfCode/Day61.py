@@ -76,3 +76,16 @@ def max_num(head: Node) -> int:
         max_number = max(max_number, int(current_number))
 
     return max_number
+
+
+def depth_of_string_stack(s):
+    max_depth = 0
+    current_depth = 0
+    for char in s:
+        if char == '(':
+            current_depth += 1
+            max_depth = max(max_depth, current_depth)
+        elif char == ')':
+            if current_depth > 0:
+                current_depth -= 1
+    return max_depth
