@@ -27,3 +27,23 @@ while top <= bottom and left <= right:
         left += 1
 
 print(*result)
+
+
+
+#Matrix Z
+n = int(input())
+matrix = []
+total = 0
+
+for i in range(n):
+    rows = list(map(int,input().split()))
+    matrix.append(rows)
+
+total += sum(matrix[0])
+if n > 1 :
+    total += sum(matrix[n-1])
+
+for j in range(1,n-1):
+    total += matrix[j][n-1-j]
+
+print(total)
