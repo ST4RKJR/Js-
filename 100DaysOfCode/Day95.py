@@ -22,3 +22,15 @@ for _ in range(int(input())):
             break
     else:
         print(-1)
+        
+        
+    # SUM OF DIGITS
+
+def Sum(N):
+    if N == 0:
+        return 0
+    return N%10 + Sum(N//10)
+
+
+# extracting the last digit
+# N % 10
