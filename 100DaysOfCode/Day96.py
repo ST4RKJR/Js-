@@ -40,3 +40,9 @@ def lengthOfLIS(nums):
     for i in range(1, len(nums)):
         ans = max(ans, f(i))
     return ans
+
+## AVERAGE MARKS
+n = int(input())
+arr = [int(i) for i in input().split()]
+
+print(sum(arr) // n)
