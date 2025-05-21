@@ -20,3 +20,35 @@ if not ans:
 
 for l, r in ans:
     print(l, r)
+    
+    
+## ADD TWO NUMBERS
+
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+def addNumber(l1, l2): 
+    dummy = Node(0)
+    temp = dummy
+
+    tot = 0
+    carry = 0
+    while l1 or l2 or carry:
+        tot = carry 
+
+        if l1:
+            tot += l1.data 
+            l1 = l1.next
+
+        if l2:
+            tot += l2.data 
+            l2 = l2.next
+        
+        temp.next = Node(tot % 10)
+        temp = temp.next 
+        carry = tot // 10 
+    
+    return dummy.next
