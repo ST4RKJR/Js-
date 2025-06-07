@@ -18,3 +18,16 @@ def invert_binary_tree(root):
     invert_binary_tree(root.right)
     
     return root
+
+
+def time_required(tickets, K):
+    target = tickets[K]
+    time = 0
+    
+    for i in range(len(tickets)):
+        if i <= K:
+            time += min(tickets[i], target)
+        else:
+            time += min(tickets[i], target - 1)
+    
+    return time
